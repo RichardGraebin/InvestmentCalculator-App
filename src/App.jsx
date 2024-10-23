@@ -1,12 +1,9 @@
-import logoPath from "./assets/investment-calculator-logo.png";
+import Header from "./Header";
 
 function App() {
   return (
     <>
-      <header id="header">
-        <img src={logoPath} />
-        <h1>Investment Calculator</h1>
-      </header>
+      <Header />
       <section id="user-input">
         <div className="input-group">
           <label>
