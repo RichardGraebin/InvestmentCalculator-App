@@ -1,4 +1,4 @@
-import logoPath from "./assets/investment-calculator-logo.png";
+import logoPath from ".././assets/investment-calculator-logo.png";
 
 export default function Header() {
   return (
