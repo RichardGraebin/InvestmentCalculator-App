@@ -15,7 +15,7 @@ function App() {
 
   function handleChange(inputIdentifier, newValue) {
     setUserInput((prevInputs) => {
-      return { ...prevInputs, [inputIdentifier]: newValue };
+      return { ...prevInputs, [inputIdentifier]: +newValue }; // + forces to sum even if it is a string
     });
   }
 
