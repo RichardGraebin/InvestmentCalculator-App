@@ -13,6 +13,8 @@ const DEFAULT_INVESTMENT = {
 function App() {
   const [userInput, setUserInput] = useState(DEFAULT_INVESTMENT);
 
+  const inputIsValid = userInput.duration >= 1;
+
   function handleChange(inputIdentifier, newValue) {
     setUserInput((prevInputs) => {
       return { ...prevInputs, [inputIdentifier]: +newValue }; // + forces to sum even if it is a string
@@ -23,7 +25,8 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
-      <Results userInput={userInput} />
+      {inputIsValid && <Results userInput={userInput} />}
+      {!inputIsValid && <p className="center">Please insert a duration greater than zero!</p>}
     </>
   );
 }
